@@ -1,8 +1,6 @@
 package com.example.PaseoAPP.controladores;
 
 import com.example.PaseoAPP.modelos.Usuario;
-import com.example.PaseoAPP.servicios.UsuarioServicio;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
