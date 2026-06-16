@@ -4,6 +4,7 @@ import com.example.PaseoAPP.dtos.UsuarioDTO;
 import com.example.PaseoAPP.mapeadores.IMapaUsuario;
 import com.example.PaseoAPP.modelos.Usuario;
 import com.example.PaseoAPP.repositorios.IRepositorioUsuario;
+import com.example.PaseoAPP.validadores.IValidadorUsuario;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -19,15 +20,20 @@ public class UsuarioServicioImpl implements IUsuarioServicio {
     private final IMapaUsuario mapaUsuario;
     private final IRepositorioUsuario repositorioUsuario;
 
-    public UsuarioServicioImpl(IMapaUsuario mapaUsuario, IRepositorioUsuario repositorioUsuario) {
+    private final IValidadorUsuario validadorUsuario;
+
+
+    public UsuarioServicioImpl(IMapaUsuario mapaUsuario, IRepositorioUsuario repositorioUsuario, IValidadorUsuario validadorUsuario) {
         this.mapaUsuario = mapaUsuario;
         this.repositorioUsuario = repositorioUsuario;
+        this.validadorUsuario = validadorUsuario;
     }
 
     @Override
     public UsuarioDTO guardarUsuarioEnBD(Usuario datos) {
 
         //Incluir validaciones (proximamente) y validar
+        this.validadorUsuario.validarNuevoUsuario(datos);
 
         //Guardar los datos y convertir la respuesta en un DTO
         Usuario usuarioGuardado=this.repositorioUsuario.save(datos);
@@ -45,6 +51,11 @@ public class UsuarioServicioImpl implements IUsuarioServicio {
         }
         //encontre el usuario
         Usuario usuarioQueEncontre=usuarioQueEstoyBuscando.get();
+
+
+        //validando los datos con los que voy a editar
+        this.validadorUsuario.validarDatosModificacion(datos);
+
         //Incluir validaciones (proximamente) y validar los datos nuevos
         //Aplicar los cambios
         usuarioQueEncontre.setNombres(datos.getNombres());
