@@ -1,5 +1,6 @@
 package com.example.PaseoAPP.controladores;
 
+import com.example.PaseoAPP.servicios.ReservaServicio;
 import com.example.PaseoAPP.modelos.Reserva;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

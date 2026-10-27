@@ -1,5 +1,6 @@
 package com.example.PaseoAPP.controladores;
 
+import com.example.PaseoAPP.dtos.LoginRequest;
 import com.example.PaseoAPP.dtos.UsuarioDTO;
 import com.example.PaseoAPP.modelos.Usuario;
 import com.example.PaseoAPP.servicios.IUsuarioServicio;
@@ -54,5 +55,17 @@ public class UsuarioControlador {
                 .status(HttpStatus.OK)
                 .body(this.servicio.buscarUsuariosEnBD());
     }
+
+    @PostMapping("/login")
+public ResponseEntity<UsuarioDTO> iniciarSesion(
+        @RequestBody LoginRequest datos) {
+
+    UsuarioDTO usuario = this.servicio.validarCredenciales(
+            datos.correo(),
+            datos.contraseña()
+    );
+
+    return ResponseEntity.ok(usuario);
+}
 
 }

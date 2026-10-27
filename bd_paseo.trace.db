@@ -1,0 +1,33 @@
+2026-10-27 00:26:42.093275-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"
+Data conversion error converting "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIOS_COPY_3_0"("ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL") OVERRIDING SYSTEM VALUE SELECT "ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL" FROM "PUBLIC"."USUARIOS" [22018-240]
+2026-10-27 01:08:14.644708-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"
+Data conversion error converting "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIOS_COPY_3_0"("ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL") OVERRIDING SYSTEM VALUE SELECT "ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL" FROM "PUBLIC"."USUARIOS" [22018-240]
+2026-10-27 01:08:18.225817-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"
+Data conversion error converting "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIOS_COPY_3_0"("ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL") OVERRIDING SYSTEM VALUE SELECT "ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL" FROM "PUBLIC"."USUARIOS" [22018-240]
+2026-10-27 01:10:46.454462-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"
+Data conversion error converting "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIOS_COPY_3_0"("ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL") OVERRIDING SYSTEM VALUE SELECT "ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL" FROM "PUBLIC"."USUARIOS" [22018-240]
+2026-10-27 02:04:45.617236-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"
+Data conversion error converting "'admin' (USUARIOS_COPY_3_0: ""ROL"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIOS_COPY_3_0"("ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL") OVERRIDING SYSTEM VALUE SELECT "ID", U&"CONTRASE\00d1A", "CORREO", "NOMBRES", "ROL" FROM "PUBLIC"."USUARIOS" [22018-240]
+2026-10-27 02:04:54.517364-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "admin"
+Data conversion error converting "admin" [22018-240]
+2026-10-27 02:08:15.995744-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM USUARIOS \000d\000a[*]SELECT DISTINCT rol FROM usuarios"
+Syntax error in SQL statement "SELECT * FROM USUARIOS \000d\000a[*]SELECT DISTINCT rol FROM usuarios"; SQL statement:
+SELECT * FROM USUARIOS 
+SELECT DISTINCT rol FROM usuarios [42000-240]
+2026-10-27 02:08:23.240713-05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM USUARIOS \000d\000a[*]SELECT DISTINCT rol FROM usuarios"
+Syntax error in SQL statement "SELECT * FROM USUARIOS \000d\000a[*]SELECT DISTINCT rol FROM usuarios"; SQL statement:
+SELECT * FROM USUARIOS 
+SELECT DISTINCT rol FROM usuarios [42000-240]

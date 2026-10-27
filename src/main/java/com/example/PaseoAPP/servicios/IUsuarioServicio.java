@@ -10,6 +10,7 @@ public interface IUsuarioServicio {
 
     //contrato que describe que se puede hacer en el servicio
     UsuarioDTO guardarUsuarioEnBD(Usuario datos);
+    UsuarioDTO validarCredenciales(String correo, String contraseña);
     UsuarioDTO modificarUsuarioEnBD(Usuario datos, UUID id);
     List<UsuarioDTO> buscarUsuariosEnBD();
     void eliminarUsuarioEnBD(UUID id);

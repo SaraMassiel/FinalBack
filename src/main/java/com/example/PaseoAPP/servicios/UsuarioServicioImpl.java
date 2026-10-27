@@ -68,6 +68,24 @@ public class UsuarioServicioImpl implements IUsuarioServicio {
     }
 
     @Override
+    public UsuarioDTO validarCredenciales(String correo, String contraseña) {
+        Optional<Usuario> usuarioEncontrado =
+                this.repositorioUsuario.findByCorreo(correo.trim());
+
+        if (usuarioEncontrado.isEmpty()
+                || !usuarioEncontrado.get().getContraseña().equals(contraseña)) {
+            throw new ResponseStatusException(
+                    HttpStatus.UNAUTHORIZED,
+                    "Correo o contraseña incorrectos"
+            );
+        }
+
+        return this.mapaUsuario.convertir_modelo_a_dto(
+                usuarioEncontrado.get()
+        );
+    }
+
+    @Override
     public List<UsuarioDTO> buscarUsuariosEnBD() {
 
         List<Usuario> usuariosEncontrados=this.repositorioUsuario.findAll();
